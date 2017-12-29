@@ -55,7 +55,8 @@
 <meta name="TNAcategory" content ="Records" />
 <meta name="WT.cg_n" content="A level" />
 <meta name="WT.cg_s" content="Welfare State" />
-
+  <script src="/scripts/jwplayer/jwplayer.js"></script>
+  <script>jwplayer.key="31yQat2y0n7kujNWMVFwot/u0KheajImXOtcK4dUMSM=";</script>
 <!--#include virtual="/includes/ga.inc" -->
 </head>
 <body>
@@ -101,28 +102,12 @@
 <div class="block-main source"><script type="text/javascript" src="/cabinetpapers/scripts/movie.js">
 </script>
 <div class="primary-source">
-<div class="img-left">
 <div id="player">
 <p>To view this film,<br />
 you will require<br />
 <a href="http://www.adobe.com/products/flashplayer/" title="Download Adobe Flash Player">Adobe Flash Player version 8 or higher</a><br />
 and <b>must have</b> JavaScript enabled.</p>
 </div>
-<script type="text/javascript">
-//<![CDATA[
-<!--var so = new SWFObject('#','mpl','185','130','8');-->
-var so = new SWFObject('/cabinetpapers/media/player.swf','mpl','185','130','8');
-
-so.addParam('allowscriptaccess','always');
-so.addParam('allowfullscreen','true');
-so.addParam('wmode', 'transparent');
-<!--sa.addParam("showicons","true");-->
-<!--so.addParam('flashvars','file=#&showicons=true&useaudio=false&usecaptions=false&captions=#&image=#&author=The National Archives&title=');-->
-so.addParam('flashvars','file=/cabinetpapers/media/ws-oliver-more.flv&showicons=true&useaudio=false&usecaptions=false&captions=/cabinetpapers/media/ws-oliver-more.xml&image=/cabinetpapers/media/ws-oliver-more.jpg&author=The National Archives&title=');
-
-so.write('player');
-//]]>
-</script></div>
 This source features two extracts from the 1948 film &#39;Oliver Twist&#39;. Director David Lean was a firm believer in Labour&#39;s Welfare State plans and used this film as a way of showing his support.<br />
 &copy;ITV Global Entertainment Ltd.</div>
 <p>This clip from the 1948 film Oliver Twist makes an important comment about the kind of Britain Labour was trying to create after the Second World War. The film&#39;s director, David Lean, was a passionate supporter of Labour&#39;s plans to create the Welfare State. He used this film as a way of supporting Labour&#39;s plans, associating the worst of the Victorian era with the years before Labour came to power.</p>
@@ -173,5 +158,27 @@ Audio: Sound of plates and eating, silence
 <div class="clear"></div>
 <!-- #include virtual="/includes/pageFooter.inc" --></div>
 <!-- OuterWrapper -->
+
+<script type="text/javascript">
+var filename = '/cabinetpapers/media/ws-oliver-more.flv';
+var captions = '/cabinetpapers/media/ws-oliver-more.xml';
+var fileimg  = '/cabinetpapers/media/ws-oliver-more.jpg';
+var filetitle = "Oliver Twist 'More?'";
+var fileauth = "The National Archives";
+	jwplayer("player").setup({
+		width:400,
+		height:300,
+		playlist: [{
+	        file:filename,
+			image: fileimg,
+			title: filetitle,
+			description: fileauth,
+			tracks: [{
+				file: captions
+			}]
+		}]
+      });
+</script>
+
 </body>
 </html>
